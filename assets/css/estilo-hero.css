@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./imagen-home.webp);
+  background-size: cover;
+  height: 100vh;
+
+  object-fit: cover;
+  overflow: hidden;
+}
+@media (max-width: 1000px) {
+  body {
+    background-image: url(./imagen-home.webp);
+    background-size: cover;
+    background-position: top;
+  }
+}
+.letra {
+  font-family: "Times New Roman", Times, serif;
+  font-style: oblique;
+}
+.conteiner {
+  display: grid;
+  justify-content: center;
+}
