@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./imagen-home.webp);
+  background-size: cover;
+  height: 100vh;
+
+  object-fit: cover;
+  overflow: hidden;
+}
+@media (max-width: 1000px) {
+  body {
+    background-image: url(./imagen-home.webp);
+    background-size: cover;
+    background-position: top;
+  }
+}
+.letra {
+  font-family: "Times New Roman", Times, serif;
+  font-style: oblique;
+}
+.fuente-h1 {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(78, 86, 156);
+  margin-left: 100px;
+}
+
+.form-contenedor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 350px;
+  text-align: center;
+  border: 1px solid rgba(12, 11, 11, 0.993);
+  border-radius: 12px;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.788);
+  backdrop-filter: blur (6px);
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0, 5);
+}
+.form-contenedor h1 {
+  font-size: 30px;
+  color: #fffefe;
+}
+.forget {
+  font-size: small;
+  font-family: cursive;
+  margin-right: 150px;
+  padding: 0px;
+}
+.forget a {
+  color: rgba(58, 58, 160, 0.993);
+}
+.input-2 {
+  background: transparent;
+}
