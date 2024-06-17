@@ -26,12 +26,11 @@ body {
 .fuente-h1 {
   font-family: "Times New Roman", Times, serif;
   color: rgb(78, 86, 156);
-  margin-left: 100px;
 }
 
 .form-contenedor {
   position: absolute;
-  top: 50%;
+  top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 350px;
@@ -40,7 +39,7 @@ body {
   border: 1px solid rgba(12, 11, 11, 0.993);
   border-radius: 12px;
   padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.788);
+  background-color: rgba(3, 3, 3, 0.616);
   backdrop-filter: blur (6px);
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0, 5);
 }
@@ -59,4 +58,8 @@ body {
 }
 .input-2 {
   background: transparent;
+}
+.parrafo {
+  font-family: "Oswald", sans-serif;
+  color: rgba(255, 235, 205, 0.575);
 }
