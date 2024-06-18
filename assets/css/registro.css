@@ -11,6 +11,10 @@ body {
   font-family: "montserrat", "roboto";
 }
 
+main {
+  background-color: #b4a175;
+}
+
 .navbar-stylos {
   background-color: #182945;
 }
@@ -33,6 +37,10 @@ body {
 .btn:hover {
   color: #182945;
   background-color: #e7c885;
+}
+
+.btn-registro {
+  background-color: #182945;
 }
 
 .boton-collapse {
