@@ -10,17 +10,21 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../assets/css/registro.css" />
+    <link rel="icon" href="../assets/css/logo.png" type="image/x-icon" />
   </head>
   <body>
     <header>
-      <nav
-        class="navbar navbar-expand-lg bg-body-tertiary"
-        data-bs-theme="dark"
-      >
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../pages/inicio.html">Inicio</a>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid py-2 navbar-stylos">
+          <a class="navbar-brand" href="../pages/inicio.html"
+            ><img
+              src="https://i.ibb.co/KwVZVfH/ba7de09d-ee3f-4202-8b58-1bbab2d126e6.jpg"
+              alt="Logo"
+              width="100"
+          /></a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler boton-collapse"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -33,15 +37,16 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="../pages/sobre-nosotros.html"
+                <a
+                  class="nav-link enlace-boton"
+                  href="../pages/sobre-nosotros.html"
                   >Sobre Nosotros</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../pages/contacto.html">Contacto</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../pages/carrito.html">Carrito</a>
+                <a class="nav-link enlace-boton" href="../pages/contacto.html"
+                  >Contacto</a
+                >
               </li>
             </ul>
           </div>
@@ -53,22 +58,18 @@
                 placeholder="Buscar"
                 aria-label="Buscar"
               />
-              <button class="btn btn-outline-success" type="submit">
-                Buscar
-              </button>
+              <button class="btn" type="submit">Buscar</button>
             </form>
           </div>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="../pages/iniciar-sesion.html"
-                  >Iniciar Sesión</a
+                <a class="nav-link enlace-boton" href="../pages/carrito.html"
+                  >Carrito &#128722;</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../pages/registro.html"
-                  >Registrarse</a
-                >
+                <a class="nav-link enlace-boton" href="#">Cerrar Sesión</a>
               </li>
             </ul>
           </div>
@@ -86,8 +87,20 @@
               id="idIngreseUsuario"
               aria-describedby="emailHelp"
             />
-            <div id="emailHelp" class="form-text">
-              We'll never share your email with anyone else.
+            <div id="idErrorUsuario" class="form-text text-danger">
+              Complete este campo
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="idIngreseEmail"
+              aria-describedby="emailHelp"
+            />
+            <div id="idErrorEmailUsuario" class="form-text text-danger">
+              Complete este campo
             </div>
           </div>
           <div class="mb-3">
@@ -99,6 +112,9 @@
               class="form-control"
               id="idIngreseContrasenia"
             />
+            <div id="idErrorContrasenia" class="form-text text-danger">
+              Complete este campo
+            </div>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label"
@@ -109,6 +125,9 @@
               class="form-control"
               id="idIngreseRepetirContrasenia"
             />
+            <div id="idErrorRepetirContrasenia" class="form-text text-danger">
+              Complete este campo
+            </div>
           </div>
           <div class="mb-3 form-check">
             <input
@@ -120,7 +139,10 @@
               >Aceptar Términos y Condiciones</label
             >
           </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
+
+          <button type="submit" class="btn btn-registro" id="idBotonRegistro">
+            Enviar Datos
+          </button>
         </form>
       </div>
     </main>
