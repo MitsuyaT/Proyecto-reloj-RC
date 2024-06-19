@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url(./imagen-home.webp);
+  background-image: url(https://divainparfums.mx/cdn/shop/articles/mejores-marcas-relojes-lujo-943730_x900_93d502b8-4cdd-4bf8-8740-5468f344ede2.jpg?v=1664399857);
   background-size: cover;
   height: 100vh;
 
@@ -14,38 +14,24 @@ body {
 }
 @media (max-width: 1000px) {
   body {
-    background-image: url(./imagen-home.webp);
+    background-image: url(https://divainparfums.mx/cdn/shop/articles/mejores-marcas-relojes-lujo-943730_x900_93d502b8-4cdd-4bf8-8740-5468f344ede2.jpg?v=1664399857);
     background-size: cover;
     background-position: top;
   }
 }
+
 .letra {
   font-family: "Times New Roman", Times, serif;
   font-style: oblique;
+  color: rgb(167, 104, 22);
 }
 .fuente-h1 {
   font-family: "Times New Roman", Times, serif;
-  color: rgb(78, 86, 156);
+  color: rgb(105, 70, 70);
+  font-weight: 900;
 }
-
-.form-contenedor {
-  position: absolute;
-  top: 56%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 350px;
-  height: 350px;
-  text-align: center;
-  border: 1px solid rgba(12, 11, 11, 0.993);
-  border-radius: 12px;
-  padding: 10px 20px;
-  background-color: rgba(3, 3, 3, 0.616);
-  backdrop-filter: blur (6px);
-  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0, 5);
-}
-.form-contenedor h1 {
-  font-size: 30px;
-  color: #fffefe;
+.titulo {
+  font-size: 50px;
 }
 .forget {
   font-size: small;
@@ -54,12 +40,25 @@ body {
   padding: 0px;
 }
 .forget a {
-  color: rgba(58, 58, 160, 0.993);
+  color: rgb(13, 108, 233);
 }
-.input-2 {
-  background: transparent;
-}
+
 .parrafo {
-  font-family: "Oswald", sans-serif;
-  color: rgba(255, 235, 205, 0.575);
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(167, 104, 22);
+}
+.form-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid;
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin-top: 40px;
+  background-color: rgba(0, 0, 0, 0.699);
+  box-shadow: 5px 5px 10px rgb(70, 66, 66);
 }
