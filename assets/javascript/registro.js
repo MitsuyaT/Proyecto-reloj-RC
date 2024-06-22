@@ -1,3 +1,5 @@
+const usuariosLocalStorage = JSON.parse(localStorage.getItem("usuarios")) || [];
+
 const ingreseUsuario = document.getElementById("idIngreseUsuario");
 const ingreseEmail = document.getElementById("idIngreseEmail");
 const ingreseContrasenia = document.getElementById("idIngreseContrasenia");
@@ -36,6 +38,50 @@ const enviarFormulario = (event) => {
   if (!ingreseRepetirContrasenia.value) {
     divErrorRepetirContrasenia.classList.remove("d-none");
     ingreseRepetirContrasenia.classList.add("is-invalid");
+  }
+
+  if (ingreseRepetirContrasenia.value === ingreseContrasenia.value) {
+    if (
+      !ingreseContrasenia.value.length &&
+      !ingreseRepetirContrasenia.value.length
+    ) {
+      return alert("ERROR: Campo vacio Contraseña y/o Repetir contraseña");
+    }
+
+    if (!ingreseEmail.value) {
+      return alert("ERROR: Campo de email vacío");
+    }
+
+    if (usuariosLocalStorage.length) {
+      const usuarioExiste = usuariosLocalStorage.find(
+        (usuario) => usuario.nombreDeUsuario === ingreseUsuario.value
+      );
+
+      if (usuarioExiste) {
+        return alert("Usuario no disponible");
+      }
+      const nuevoUsuario = {
+        id: usuariosLocalStorage[usuariosLocalStorage.length - 1].id + 1,
+        nombreDeUsuario: ingreseUsuario.value,
+        contrasenia: ingreseContrasenia.value,
+      };
+
+      usuariosLocalStorage.push(nuevoUsuario);
+      localStorage.setItem("usuarios", JSON.stringify(usuariosLocalStorage));
+      alert("Usuario creado con éxito");
+    } else {
+      const nuevoUsuario = {
+        id: 1,
+        nombreDeUsuario: ingreseUsuario.value,
+        contrasenia: ingreseContrasenia.value,
+      };
+
+      usuariosLocalStorage.push(nuevoUsuario);
+      localStorage.setItem("usuarios", JSON.stringify(usuariosLocalStorage));
+      alert("Usuario creado con éxito");
+    }
+  } else {
+    alert("Las contraseñas no son iguales");
   }
 };
 
