@@ -11,11 +11,9 @@ body {
   font-family: "montserrat", "roboto";
 }
 
-#navbar-styles{
+#navbar-styles {
   background-color: #182945;
 }
-
-
 
 .enlace-boton {
   color: #e7c885;
@@ -46,7 +44,17 @@ body {
 /*FOOTER*/
 
 footer {
-    border-top: 1px solid #182945;
+  border-top: 1px solid #182945;
 }
 
 /*Comienzo Inicio pag*/
+
+#carouselExampleAutoplaying {
+  width: 100%; /* Ajusta el tamaño del carrusel */
+  margin: auto; /* Centra el carrusel horizontalmente */
+}
+
+#carouselExampleAutoplaying img {
+  width: 100%; /* Ajusta la altura de las imágenes */
+  height: auto;
+}
