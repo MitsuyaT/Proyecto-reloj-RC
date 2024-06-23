@@ -50,11 +50,7 @@ footer {
 /*Comienzo Inicio pag*/
 
 #carouselExampleAutoplaying {
-  width: 100%; /* Ajusta el tamaño del carrusel */
-  margin: auto; /* Centra el carrusel horizontalmente */
 }
 
 #carouselExampleAutoplaying img {
-  width: 100%; /* Ajusta la altura de las imágenes */
-  height: auto;
 }
