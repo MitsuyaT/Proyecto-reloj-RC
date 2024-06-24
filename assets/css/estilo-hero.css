@@ -63,6 +63,33 @@ body {
   box-shadow: 5px 5px 10px rgb(70, 66, 66);
 }
 
+.enlace-boton {
+  color: #e7c885;
+}
+
+.enlace-boton:hover {
+  background-color: #e7c885;
+  color: #182945;
+  border-radius: 5px;
+}
+
+.btn {
+  color: #e7c885;
+  border-color: #e7c885;
+}
+
+.btn:hover {
+  color: #182945;
+  background-color: #e7c885;
+}
+
+.boton-collapse {
+  background-color: #e7c885;
+}
+.fondoDropdown {
+  background-color: #182945;
+}
+
 #navbar-styles {
   background-color: #182945;
 }
