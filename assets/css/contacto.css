@@ -1,0 +1,44 @@
+#navbar-styles {
+  background-color: #182945;
+}
+
+.enlace-boton {
+  color: #e7c885;
+}
+
+.enlace-boton:hover {
+  background-color: #e7c885;
+  color: #182945;
+  border-radius: 5px;
+}
+
+.btn {
+  color: #e7c885;
+  border-color: #e7c885;
+}
+
+.btn:hover {
+  color: #182945;
+  background-color: #e7c885;
+}
+
+.boton-collapse {
+  background-color: #e7c885;
+}
+.fondoDropdown {
+  background-color: #182945;
+}
+
+/*NAV BAR Fin*/
+
+/*FOOTER*/
+
+footer {
+  border-top: 1px solid #182945;
+}
+
+/*Comienzo Inicio pag*/
+
+section {
+  background-color: #25344c;
+}
