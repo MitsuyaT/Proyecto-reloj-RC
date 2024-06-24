@@ -10,7 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../assets/css/registro.css" />
+    <link rel="stylesheet" href="../assets/css/iniciar-sesion.css" />
     <link rel="icon" href="../assets/css/logo.png" type="image/x-icon" />
   </head>
   <body>
@@ -48,8 +48,32 @@
                   >Contacto</a
                 >
               </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle enlace-boton"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Categorías
+                </a>
+                <ul
+                  class="dropdown-menu fondoDropdown"
+                  aria-labelledby="navbarDropdown"
+                >
+                  <li>
+                    <a class="dropdown-item enlace-boton" href="#">Rolex</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item enlace-boton" href="#">Cassio</a>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </div>
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <form class="d-flex" role="search">
               <input
@@ -69,7 +93,9 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link enlace-boton" href="#">Cerrar Sesión</a>
+                <a class="nav-link enlace-boton" href="../pages/heroPage.html"
+                  >Cerrar Sesión</a
+                >
               </li>
             </ul>
           </div>
@@ -80,14 +106,9 @@
       <div class="d-flex justify-content-center py-2">
         <form>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input
-              type="email"
-              class="form-control"
-              id="idIngreseEmail"
-              aria-describedby="emailHelp"
-            />
-            <div id="idErrorEmailUsuario" class="form-text text-danger">
+            <label for="exampleInputEmail1" class="form-label">Usuario</label>
+            <input type="text" class="form-control" id="idIngreseUsuario" />
+            <div id="idErrorUsuario" class="form-text text-danger">
               Complete este campo
             </div>
           </div>
@@ -105,12 +126,46 @@
             </div>
           </div>
 
-          <button type="submit" class="btn btn-registro" id="idIniciarSesion">
+          <button
+            type="submit"
+            class="btn btn-registro"
+            id="idBotonIniciarSesion"
+          >
             Enviar Datos
           </button>
         </form>
       </div>
     </main>
+    <footer
+        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+      >
+        <p class="col-md-4 mb-0 text-dark">© 2024 Company, Inc</p>
+        <a
+          href="#"
+          class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+        >
+          <img
+            width="20%"
+            src="/Proyecto-reloj-RC/assets/src/Logo-reloj-dorado.jpg"
+            style="border-radius: 5%"
+            alt="logo-reloj-dorado"
+          />
+        </a>
+        <ul class="text-end col-md-4 list-unstyled">
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-dark">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-dark">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-dark">Sobre nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-dark">Contacto</a>
+          </li>
+        </ul>
+      </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

@@ -1,21 +1,21 @@
-const ingreseEmail = document.getElementById("idIngreseEmail");
+const ingreseUsuario = document.getElementById("idIngreseUsuario");
 const ingreseContrasenia = document.getElementById("idIngreseContrasenia");
 
 const botonIniciarSesion = document.getElementById("idBotonIniciarSesion");
-const divErrorEmailUsuario = document.getElementById("idErrorEmailUsuario");
+const divErrorUsuario = document.getElementById("idErrorUsuario");
 const divErrorContrasenia = document.getElementById("idErrorContrasenia");
 
 const usuariosLocalStorage = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-divErrorEmailUsuario.classList.add("d-none");
+divErrorUsuario.classList.add("d-none");
 divErrorContrasenia.classList.add("d-none");
 
 const enviarFormulario = (event) => {
   event.preventDefault();
 
-  if (!ingreseEmail.value) {
-    divErrorEmailUsuario.classList.remove("d-none");
-    ingreseEmail.classList.add("is-invalid");
+  if (!ingreseUsuario.value) {
+    divErrorUsuario.classList.remove("d-none");
+    ingreseUsuario.classList.add("is-invalid");
   }
 
   if (!ingreseContrasenia.value) {
@@ -27,8 +27,22 @@ const enviarFormulario = (event) => {
     const usuario = usuariosLocalStorage.find(
       (usuario) => usuario.nombreDeUsuario === ingreseUsuario.value
     );
+    if (!usuario) {
+      alert("Usuario o contraseña no coinciden.");
+    }
 
-    console.log(usuario);
+    if (usuario.contrasenia === ingreseContrasenia.value) {
+      const usuarioPosicion = localStorage.findIndex(
+        (usuariosLocal) => usuariosLocal.id === usuario.id
+      );
+
+      usuariosLocalStorage[usuarioPosicion].login = true;
+      sessionStorage.setItem("usuario", JSON.stringify(usuario));
+      localStorage.setItem("usuarios", JSON.stringify(usuariosLocalStorage));
+      alert(`Bienvenido ${usuario.nombreDeUsuario} iniciaste sesión`);
+    } else {
+      alert("Usuario o contraseña no coinciden.");
+    }
   }
 };
 

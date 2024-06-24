@@ -21,6 +21,7 @@ divErrorRepetirContrasenia.classList.add("d-none");
 
 const enviarFormulario = (event) => {
   event.preventDefault();
+  botonRegistro.disabled = true;
   if (!ingreseUsuario.value) {
     divErrorUsuario.classList.remove("d-none");
     ingreseUsuario.classList.add("is-invalid");
@@ -28,19 +29,22 @@ const enviarFormulario = (event) => {
   if (!ingreseEmail.value) {
     divErrorEmailUsuario.classList.remove("d-none");
     ingreseEmail.classList.add("is-invalid");
+    botonRegistro.disabled = false;
   }
 
   if (!ingreseContrasenia.value) {
     divErrorContrasenia.classList.remove("d-none");
     ingreseContrasenia.classList.add("is-invalid");
+    botonRegistro.disabled = false;
   }
 
   if (!ingreseRepetirContrasenia.value) {
     divErrorRepetirContrasenia.classList.remove("d-none");
     ingreseRepetirContrasenia.classList.add("is-invalid");
+    botonRegistro.disabled = false;
   }
 
-  if (ingreseRepetirContrasenia.value === ingreseContrasenia.value) {
+  if (ingreseContrasenia.value === ingreseRepetirContrasenia.value) {
     if (
       !ingreseContrasenia.value.length &&
       !ingreseRepetirContrasenia.value.length
@@ -49,6 +53,7 @@ const enviarFormulario = (event) => {
     }
 
     if (!ingreseEmail.value) {
+      botonRegistro.disabled = false;
       return alert("ERROR: Campo de email vacío");
     }
 
@@ -58,30 +63,46 @@ const enviarFormulario = (event) => {
       );
 
       if (usuarioExiste) {
+        botonRegistro.disabled = false;
         return alert("Usuario no disponible");
       }
       const nuevoUsuario = {
         id: usuariosLocalStorage[usuariosLocalStorage.length - 1].id + 1,
         nombreDeUsuario: ingreseUsuario.value,
         contrasenia: ingreseContrasenia.value,
+        email: ingreseEmail.value,
+        role: "usuario",
+        login: false,
+        bloqueado: false,
       };
 
       usuariosLocalStorage.push(nuevoUsuario);
       localStorage.setItem("usuarios", JSON.stringify(usuariosLocalStorage));
       alert("Usuario creado con éxito");
+      setTimeout(() => {
+        location.href = "../pages/paginaPrincipal.html";
+      }, 1000);
     } else {
       const nuevoUsuario = {
         id: 1,
         nombreDeUsuario: ingreseUsuario.value,
         contrasenia: ingreseContrasenia.value,
+        email: ingreseEmail.value,
+        role: "usuario",
+        login: false,
+        bloqueado: false,
       };
 
       usuariosLocalStorage.push(nuevoUsuario);
       localStorage.setItem("usuarios", JSON.stringify(usuariosLocalStorage));
       alert("Usuario creado con éxito");
+      setTimeout(() => {
+        location.href = "../pages/paginaPrincipal.html";
+      }, 1000);
     }
   } else {
     alert("Las contraseñas no son iguales");
+    botonRegistro.disabled = false;
   }
 };
 
