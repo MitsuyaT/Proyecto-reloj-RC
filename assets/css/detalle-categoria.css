@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .card-style img {
-  height: 200px;
+  height: 300px;
   object-fit: cover;
 }
 p {
@@ -21,12 +21,20 @@ h5 {
   font-size: 50px;
   font-family: "Times New Roman", Times, serif;
   font-weight: 900;
-  color: rgba(25, 26, 94, 0.74);
+  color: rgb(243, 234, 234);
   font-style: italic;
   margin-top: 15px;
 }
 .fondo {
-  background-color: rgba(124, 70, 8, 0.356);
+  background: rgb(36, 8, 161);
+  background: linear-gradient(
+    90deg,
+    rgba(36, 8, 161, 1) 0%,
+    rgba(1, 5, 2, 1) 0%,
+    rgba(1, 1, 1, 1) 2%,
+    rgba(4, 25, 77, 1) 84%,
+    rgba(4, 1, 1, 0.9780287114845938) 100%
+  );
 }
 .card-style {
   background-color: rgba(83, 66, 11, 0.247);
