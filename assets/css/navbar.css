@@ -25,6 +25,10 @@ body {
   border-radius: 5px;
 }
 
+.fondoDropdown {
+  background-color: #182945;
+}
+
 .btn {
   color: #e7c885;
   border-color: #e7c885;
