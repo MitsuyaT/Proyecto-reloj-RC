@@ -62,3 +62,7 @@ body {
   background-color: rgba(0, 0, 0, 0.699);
   box-shadow: 5px 5px 10px rgb(70, 66, 66);
 }
+
+#navbar-styles {
+  background-color: #182945;
+}
