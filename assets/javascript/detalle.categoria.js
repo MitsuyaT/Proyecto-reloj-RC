@@ -99,11 +99,11 @@ divCards.innerHTML = productoReloj
 <div class="card card-style" style="width: 18rem;">
   <img src="${producto.imagen}" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">${producto.nombre}</h5>
-    <h5 class="card-title">${producto.descripcion}</h5>
-    <p class="card-text">$${producto.precio}</p>
+    <h5 class="card-title text-light">${producto.nombre}</h5>
+    <h5 class="card-title text-light">${producto.descripcion}</h5>
+    <p class="card-text text-light">$${producto.precio}</p>
     <div class="d-flex justify-content-center">
-    <a href="#" class="btn btn-secondary">ver mas</a>
+    <a href="../pages/detalle-producto.html?id=${producto.id}" class="btn btn-secondary">ver mas</a>
     </div>
   </div>
 </div>
