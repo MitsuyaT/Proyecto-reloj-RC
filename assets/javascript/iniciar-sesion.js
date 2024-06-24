@@ -5,6 +5,8 @@ const botonIniciarSesion = document.getElementById("idBotonIniciarSesion");
 const divErrorEmailUsuario = document.getElementById("idErrorEmailUsuario");
 const divErrorContrasenia = document.getElementById("idErrorContrasenia");
 
+const usuariosLocalStorage = JSON.parse(localStorage.getItem("usuarios")) || [];
+
 divErrorEmailUsuario.classList.add("d-none");
 divErrorContrasenia.classList.add("d-none");
 
@@ -19,6 +21,14 @@ const enviarFormulario = (event) => {
   if (!ingreseContrasenia.value) {
     divErrorContrasenia.classList.remove("d-none");
     ingreseContrasenia.classList.add("is-invalid");
+  }
+
+  if (ingreseUsuario.value.length && ingreseContrasenia.value.length) {
+    const usuario = usuariosLocalStorage.find(
+      (usuario) => usuario.nombreDeUsuario === ingreseUsuario.value
+    );
+
+    console.log(usuario);
   }
 };
 
