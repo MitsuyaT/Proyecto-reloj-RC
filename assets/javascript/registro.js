@@ -80,7 +80,7 @@ const enviarFormulario = (event) => {
       localStorage.setItem("usuarios", JSON.stringify(usuariosLocalStorage));
       alert("Usuario creado con éxito");
       setTimeout(() => {
-        location.href = "../pages/paginaPrincipal.html";
+        location.href = "../pages/index.html";
       }, 1000);
     } else {
       const nuevoUsuario = {
@@ -97,7 +97,7 @@ const enviarFormulario = (event) => {
       localStorage.setItem("usuarios", JSON.stringify(usuariosLocalStorage));
       alert("Usuario creado con éxito");
       setTimeout(() => {
-        location.href = "../pages/paginaPrincipal.html";
+        location.href = "../pages/Index.html";
       }, 1000);
     }
   } else {
