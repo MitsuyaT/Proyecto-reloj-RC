@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.card-style img {
+  height: 300px;
+  object-fit: cover;
+}
+p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+h5 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fuente {
+  font-size: 50px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 900;
+  color: rgb(243, 234, 234);
+  font-style: italic;
+  margin-top: 15px;
+}
+.fondo {
+  background: rgb(36, 8, 161);
+  background: linear-gradient(
+    90deg,
+    rgba(36, 8, 161, 1) 0%,
+    rgba(1, 5, 2, 1) 0%,
+    rgba(1, 1, 1, 1) 2%,
+    rgba(4, 25, 77, 1) 84%,
+    rgba(4, 1, 1, 0.9780287114845938) 100%
+  );
+}
+.card-style {
+  background-color: rgba(83, 66, 11, 0.247);
+}
+.fondoDropdown {
+  background-color: #182945;
+}

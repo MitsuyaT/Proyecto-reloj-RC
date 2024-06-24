@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#navbar-styles {
+  background-color: #182945;
+}
+
+.titulo {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  color: rgb(243, 180, 84);
+}
+.parrafo {
+  font-style: italic;
+  font-weight: 900;
+}
+.fondo {
+  background: rgb(145, 136, 136);
+  background: linear-gradient(
+    15deg,
+    rgba(145, 136, 136, 1) 27%,
+    rgba(37, 56, 112, 1) 89%
+  );
+  height: 100vh;
+}
+.contenedor img {
+  border-radius: 100px;
+}

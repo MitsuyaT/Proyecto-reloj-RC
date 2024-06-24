@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url(./imagen-home.webp);
+  background-image: url(https://divainparfums.mx/cdn/shop/articles/mejores-marcas-relojes-lujo-943730_x900_93d502b8-4cdd-4bf8-8740-5468f344ede2.jpg?v=1664399857);
   background-size: cover;
   height: 100vh;
 
@@ -14,16 +14,51 @@ body {
 }
 @media (max-width: 1000px) {
   body {
-    background-image: url(./imagen-home.webp);
+    background-image: url(https://divainparfums.mx/cdn/shop/articles/mejores-marcas-relojes-lujo-943730_x900_93d502b8-4cdd-4bf8-8740-5468f344ede2.jpg?v=1664399857);
     background-size: cover;
     background-position: top;
   }
 }
+
 .letra {
   font-family: "Times New Roman", Times, serif;
   font-style: oblique;
+  color: rgb(167, 104, 22);
 }
-.conteiner {
-  display: grid;
+.fuente-h1 {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(105, 70, 70);
+  font-weight: 900;
+}
+.titulo {
+  font-size: 50px;
+}
+.forget {
+  font-size: small;
+  font-family: cursive;
+  margin-right: 150px;
+  padding: 0px;
+}
+.forget a {
+  color: rgb(13, 108, 233);
+}
+
+.parrafo {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(167, 104, 22);
+}
+.form-contenedor {
+  display: flex;
   justify-content: center;
+  align-items: center;
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid;
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin-top: 40px;
+  background-color: rgba(0, 0, 0, 0.699);
+  box-shadow: 5px 5px 10px rgb(70, 66, 66);
 }
