@@ -24,6 +24,11 @@ const enviarFormulario = (event) => {
   }
 
   if (ingreseUsuario.value.length && ingreseContrasenia.value.length) {
+    const usuario = usuariosLocalStorage.find(
+      (usuario) => usuario.nombreDeUsuario === ingreseUsuario.value
+    );
+
+    console.log(usuario);
   }
 };
 
